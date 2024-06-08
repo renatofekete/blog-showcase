@@ -1,0 +1,118 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.header {
+  text-align: center;
+  margin: 4rem 1rem 0;
+}
+
+.header__title {
+  font-size: 2.25rem;
+  text-transform: uppercase;
+}
+
+.header__text {
+  margin: 1rem 0;
+  font-size: 1.25rem;
+  text-wrap: balance;
+}
+
+.header__link {
+  color: black;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+}
+
+.header__link::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+}
+
+.section {
+  margin: 2rem auto;
+  width: 304px;
+}
+
+.mocktail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.mocktail__image {
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.mocktail__image-container {
+  position: relative;
+}
+
+.mocktail__image-container--bg-top-left::after,
+.mocktail__image-container--bg-top-right::after,
+.mocktail__image-container--bg-bottom-left::before,
+.mocktail__image-container--bg-bottom-right::before {
+  content: '';
+  position: absolute;
+  width: 135px;
+  height: 135px;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mocktail__image-container--bg-top-left::after {
+  background-image: url('assets/effect_1.png');
+  left: -50px;
+  top: -20px;
+}
+
+.mocktail__image-container--bg-top-right::after {
+  background-image: url('assets/effect_3.png');
+  right: -20px;
+  top: -35px;
+}
+
+.mocktail__image-container--bg-bottom-left::before {
+  background-image: url('assets/effect_2.png');
+  left: -40px;
+  bottom: -10px;
+}
+
+.mocktail__image-container--bg-bottom-right::before {
+  background-image: url('assets/effect_4.png');
+  right: -10px;
+  bottom: -15px;
+}
+
+.mocktail__title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
