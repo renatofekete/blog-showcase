@@ -23,6 +23,7 @@ img {
 
 .header__title {
   font-size: 2.25rem;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -36,7 +37,7 @@ img {
   color: black;
   font-size: 1.125rem;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
   position: relative;
 }
@@ -63,6 +64,7 @@ img {
   align-items: center;
   text-align: center;
   padding: 2rem 0;
+  font-weight: 600;
 }
 
 .mocktail__image {
@@ -90,8 +92,8 @@ img {
 
 .mocktail__image-container--bg-top-left::after {
   background-image: url('assets/effect_1.png');
-  left: -50px;
-  top: -20px;
+  left: -30px;
+  top: -10px;
 }
 
 .mocktail__image-container--bg-top-right::after {
@@ -114,5 +116,70 @@ img {
 
 .mocktail__title {
   font-size: 1.5rem;
+  font-weight: 600;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1440px) {
+  html {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .header {
+    margin: 4rem;
+  }
+
+  .header__title {
+    font-size: 3.375rem;
+  }
+
+  .header__text {
+    font-size: 1.5rem;
+  }
+
+  .header__link {
+    font-size: 1.25rem;
+  }
+
+  .section {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mocktail {
+    width: 360px;
+  }
+
+  .mocktail__image-container--bg-top-left::after,
+  .mocktail__image-container--bg-top-right::after,
+  .mocktail__image-container--bg-bottom-left::before,
+  .mocktail__image-container--bg-bottom-right::before {
+    width: 160px;
+    height: 160px;
+  }
+
+  .mocktail__image-container--bg-top-left::after {
+    left: -50px;
+  }
+
+  .mocktail__image-container--bg-bottom-left::before {
+    left: -50px;
+    bottom: -15px;
+  }
+
+  .mocktail__image-container--bg-top-right::after {
+    top: -25px;
+  }
+
+  .mocktail__image-container--bg-bottom-right::before {
+    right: -15px;
+    bottom: -20px;
+  }
+
+  .mocktail__title {
+    font-size: 2.25rem;
+  }
 }
